@@ -4,7 +4,7 @@ const hello  = require('./route/hello');
 
 let app = express();
 
-// listen at port :PORT - default as 3000
+// listen at port :PORT - default as 3030
 let port = process.env.PORT || 3030;
 app.listen(port);
 

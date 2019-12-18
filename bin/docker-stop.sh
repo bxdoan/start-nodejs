@@ -3,5 +3,6 @@ s=$BASH_SOURCE ; s=$(dirname "$s") ; s=$(cd "$s" && pwd) ; SCRIPT_HOME="$s"  # g
 a="$SCRIPT_HOME/.." ;                a=$(cd "$a" && pwd) ; APP_HOME="$a"
 
 cd "$SCRIPT_HOME"
-    yarn start
-cd --
+    # stop the container ie stop the api app
+    cn='bxd_nodejs_start'; docker stop $cn && docker rm $cn  # cn aka CONTAINER_NAME
+cd -
